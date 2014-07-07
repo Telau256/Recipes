@@ -1,0 +1,31 @@
+h3 {{recipe.name}}
+P
+h4 Naam van recept:
+P
+input(ng-model='recipe.name')
+P
+
+p
+h4 Ingredienten:
+p
+div(ng-repeat='ingredient in recipe.ingredients')
+  label(for='ingredient')
+  input(ng-model='ingredient.ingredient', name='ingredient')
+  button(ng-click='removeIngredient($index)') -
+
+button(ng-click='addIngredient()') + Ingredient
+
+p
+h4 Handelingen:
+p
+div(ng-repeat='step in recipe.steps')
+  label(for='step') 
+  input(ng-model='step.step', name='step')
+  button(ng-click='removeStep($index)') -
+
+button(ng-click='addStep()') + Handeling
+
+
+
+p
+  button(ng-click='createRecipe()') Save recipe

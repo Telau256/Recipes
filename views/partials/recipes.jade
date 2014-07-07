@@ -1,0 +1,4 @@
+div(ng-repeat='recipe in recipes')
+  a(href='/recipe/{{recipe.id}}') {{recipe.name}}
+
+button(ng-click="go('/newRecipe')") Nieuw recept
