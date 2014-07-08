@@ -34,6 +34,6 @@ app.get('/api/getRecipes', api.getRecipes);
 app.get('/api/getRecipe/:id', api.getRecipe);
 app.put('/api/updateRecipe/:id', api.updateRecipe);
 
-server.listen(3000, function(){
+server.listen(process.env.PORT || 3000, function(){
 	console.log("Family Tree server listening on port %d in %s mode", server.address().port, app.settings.env);		
 });
